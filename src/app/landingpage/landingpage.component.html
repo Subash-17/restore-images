@@ -1,0 +1,72 @@
+<div id="landing">
+  <div class="lannding-wrapper">
+      <div class="users-wrapper">
+        <a class="user-cta" href="">
+          Used by over <span class="number">3000,00</span> happy users
+        </a>
+      </div>
+    <div class="heading-wrapper">
+      <h1>Restoring old photos <span class="relative">using AI</span> for everyone</h1>
+    </div>
+    <div class="sub-title-heading">
+      <p class="sub-heading">
+        Have old and blurry face photos? Let our AI restore them so those memories can live on. 100% free - restore your
+        photos today.
+      </p>
+    </div>
+    <div class="redirect">
+      <a class="redirect-youtube" href="https://www.youtube.com/watch?v=FRQtFDDrUXQ">
+        Learn how it's built
+      </a>
+      <a class="redirect-restore" href="../restore">
+        Restore your photos
+      </a>
+    </div>
+    <div class="restore">
+      <div class="sub-restore">
+        <h2 class="restore-heading">Original Photo</h2>
+        <img class="restore-image" src="../../assets/images/michael.jpeg" alt="michael">
+      </div>
+      <div class="sub-restore">
+        <h2 class="restore-heading">Restored Photo</h2>
+        <img class="restore-image" src="../../assets/images/michael-new.webp" alt="michael">
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card-wrapper">
+    <h1 class="card-heading">Loved by many worldwide.</h1>
+    <p class="card-sub-heading">
+      See what our 300,000+ users are saying about the product.
+    </p>
+  </div>
+
+
+
+
+
+
+   <div class="grid"  data-masonry='{"percentPosition": true}'>
+    <div class="item"   *ngFor="let item of items">
+      <a class="card-cta col-3" [href]="item['testlink']">
+        <div>
+          <p class="sub-access">{{item['testhead']}}</p>
+        </div>
+        <div class="card-subtitle">
+          <div class="main-head">
+            <p class="sub-head-access">{{item['test']}}</p>
+            <p class="sub-access-title">{{item['testcontent']}}</p>
+          </div>
+          <div>
+            <img class="card-image" [src]="item['textimg']" alt="image">
+          </div>    
+        </div>
+      </a>
+    </div>
+   </div>
+
+
+
+    
+    
+    

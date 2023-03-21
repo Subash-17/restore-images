@@ -1,0 +1,33 @@
+<div class="restore-page">
+    <div class="restore-counting">
+        <a href="#" aria-label="">
+            <span>647,143 images</span> restored and counting
+        </a>
+    </div>
+    <h1 class="restore-header">Restore any face photo</h1>
+    <p class="restore-description">You have <span>4 generations</span> left today. Your generations will renew in <span>9 hours and 26 minutes.</span></p>
+    <div class="file-upload-wrapper">
+        <p-progressSpinner [ngStyle]="{'display':isImageUploading ? 'block' :'none'}"></p-progressSpinner>
+        <div class="file-upload" [ngStyle]="{'display': imageUploaded || isImageUploading ? 'none' :'flex'}">
+            <button class="upload-button" (click)="uploadImage()">Upload an Image</button>
+        <input hidden #imageUpload type="file" accept="image/*" (change)="onBasicUpload($event)">
+        <p class="file-drag">...or drag and drop an image.</p>
+        </div>
+        <div class="photo-comparison" [ngStyle]="{'display': imageUploaded ? 'flex' :'none'}">
+            <!-- <div class="photo-comparison-wrapper"> -->
+                <div class="comparison-image-1">
+                    <p>Uploaded image</p>
+                    <img class="uploaded-image" [src]="imageUrl" alt="uploaded-image">
+                </div>
+                <div class="comparison-image-2">
+                    <p>Restored image</p>
+                    <img [src]="restoredImage" class="restored-image" alt="">
+                </div>
+            <!-- </div> -->
+        </div>
+        <div class="restored-button" [ngStyle]="{'display': imageUploaded ? 'flex' :'none'}">
+            <button (click)="uploadImage()">Upload New Photo</button>
+            <button  (click)="downloadImage()">Download Restored Photo</button>
+        </div>
+    </div>
+</div>

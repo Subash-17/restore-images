@@ -1,0 +1,16 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ApiService {
+
+  constructor(private http: HttpClient) { }
+  getPredictions(formData:any): Observable<any> {
+    console.log("Into get predictions")
+    return this.http.post<any>('http://localhost:3000/api/predictions',formData);
+  }
+
+}
